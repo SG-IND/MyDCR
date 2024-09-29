@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TpscheduleActivity">
+    <LinearLayout
+        android:id="@+id/tpll1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/dash_background"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tpename"
+                android:text="E.Name: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tphq"
+                android:text="HQ: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tpdesig"
+                android:text="Desig.: "
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/tplogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tpheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/tpll1"
+        android:background="@drawable/dash_background"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="TP/VISIT SCHEDULE"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_below="@id/tpheading"
+        android:id="@+id/tpll2">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="10"
+android:textAlignment="center"
+            android:text="Visit Planning Date"
+            />
+            <TextView
+                android:id="@+id/tpvisitdate"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:ems="10"
+                android:onClick="tpfetchdate"
+                android:background="@android:drawable/editbox_background"
+                android:drawableRight="@android:drawable/ic_menu_today"
+                android:drawablePadding="16dp"
+
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tpselectroute"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="10"
+            android:background="@android:drawable/editbox_background"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:drawablePadding="16dp"
+            android:hint="Select Route"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tpheading2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/tpll2"
+        android:background="@drawable/dash_background"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="SELECT DOCTOR TO SCEDULE VISIT"/>
+    <ScrollView
+        android:id="@+id/tpscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tpheading2"
+        android:layout_above="@id/tpfooter"
+        android:background="@drawable/scroll_style"
+        android:scrollbars="vertical">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tptable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:layout_marginTop="0dp"
+                android:isScrollContainer="true"
+                >
+                <TableRow
+                    android:layout_marginTop="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                       android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="S. No"
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="Dr. Name"
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:text="Speciality"
+                        android:gravity="center"
+
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="Select"
+                        >
+                    </TextView>
+
+
+                </TableRow>
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+<LinearLayout
+    android:id="@+id/tpfooter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:layout_margin="10dp"
+    android:layout_alignParentBottom="true">
+    <TextView
+        android:id="@+id/tpshowcount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="TOTAL DR PLANNED: "
+
+        android:textSize="18sp"/>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:text="Save"
+    android:onClick="saveschedule"
+    android:layout_weight="1"
+    android:background="@drawable/button_background"/>
+
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorCallActivity">
+    <LinearLayout
+        android:id="@+id/dcll1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/dash_background"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dcename"
+                android:text="E.Name: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dchq"
+                android:text="HQ: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dcdesig"
+                android:text="Desig.: "
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/dclogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/dcheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/dcll1"
+        android:background="@drawable/dash_background"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="DOCTOR CALL"/>
+    <LinearLayout
+        android:id="@+id/dcll2"
+        android:layout_below="@id/dcheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="10"
+            android:textAlignment="center"
+            android:text="Reporting Date"
+            />
+        <TextView
+            android:id="@+id/dcreportdate"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:ems="10"
+            android:textStyle="bold"
+            android:onClick="dcfetchreportdate"
+            android:background="@android:drawable/editbox_background"
+            android:drawableRight="@android:drawable/ic_menu_today"
+            android:drawablePadding="16dp"
+
+            />
+
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/tpscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dcll2"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/scroll_style"
+        android:scrollbars="vertical">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/dctable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"
+                android:layout_marginTop="0dp"
+                android:isScrollContainer="true"
+                >
+                <TableRow
+                    android:layout_marginTop="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="S. No"
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="Dr. Name"
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:text="Speciality"
+                        android:gravity="center"
+
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="Route"
+                        >
+                    </TextView>
+                    <TextView
+                        android:textSize="18sp"
+
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/cell_style"
+                        android:gravity="center"
+                        android:text="Action"
+                        >
+                    </TextView>
+
+                </TableRow>
+
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</RelativeLayout>

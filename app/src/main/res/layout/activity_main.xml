@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tecvertex.mydcr.MainActivity">
+
+<ImageView
+    android:id="@+id/companyselectlogo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/logo"
+    android:contentDescription="My DCR"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="20dp"/>
+    <RelativeLayout
+        android:layout_below="@id/companyselectlogo"
+        android:layout_above="@id/companyselectbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    <EditText
+        android:id="@+id/etclientcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:ems="10"
+android:textAlignment="center"
+        android:background="@drawable/edittext_background"
+        android:hint="@string/enter_company_code"
+        android:textColorHint="@color/purple_200"
+        android:padding="10dp"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/purple_200"
+        android:inputType="textCapCharacters"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/coople"/>
+    </RelativeLayout>
+<Button
+    android:id="@+id/companyselectbtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_background"
+    android:layout_alignParentBottom="true"
+    android:text="@string/proceed"
+    android:onClick="fetchCompanyDetails"
+    android:fontFamily="@font/mbold"
+    android:layout_centerHorizontal="true"/>
+</RelativeLayout>

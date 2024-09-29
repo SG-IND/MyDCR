@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyDCR</string>
+    <string name="proceed">proceed</string>
+    <string name="enter_company_code">Enter Company Code</string>
+</resources>

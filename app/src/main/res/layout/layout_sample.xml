@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutedit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:inputType="number"
+    android:ems="10"
+    android:textStyle="bold"
+    android:textSize="18sp"
+    android:padding="10dp"
+    android:background="@drawable/edittext_background"
+    android:textColor="@color/purple_700">
+
+</EditText>

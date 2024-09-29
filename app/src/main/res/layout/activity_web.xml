@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="com.tecvertex.mydcr.WebActivity">
+    <LinearLayout
+        android:id="@+id/webll1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/dash_background"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webename"
+                android:text="E.Name: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webhq"
+                android:text="HQ: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webdesig"
+                android:text="Desig.: "
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/weblogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/labelheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+         android:layout_below="@id/webll1"
+        android:background="@drawable/dash_background"
+
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text=""/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webscrollview1"
+        android:background="@drawable/dash_background"
+android:layout_below="@id/labelheading"
+        android:layout_above="@id/webbackbtn"
+        android:padding="5dp"
+
+        >
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:id="@+id/showwebView"
+
+            />
+    </ScrollView>
+    <Button
+        android:id="@+id/webbackbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="back"
+        android:onClick="back"
+        android:fontFamily="@font/mbold"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

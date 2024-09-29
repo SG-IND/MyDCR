@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tecvertex.mydcr.DashboardActivity">
+    <LinearLayout
+        android:id="@+id/dashll1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/dash_background"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dashename"
+                android:text="E.Name: "
+android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dashhq"
+                android:text="HQ: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/dashdesig"
+                android:text="Desig.: "
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="5dp"
+                android:id="@+id/dashlogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+    </LinearLayout>
+<TextView
+    android:layout_marginTop="20dp"
+    android:id="@+id/lablescorecard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:background="@drawable/dash_background"
+    android:layout_below="@id/dashll1"
+    android:textAlignment="center"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:text="MY SCORECARD">
+
+</TextView>
+<LinearLayout
+    android:layout_marginTop="10dp"
+    android:id="@+id/dashll2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/dash_background"
+    android:layout_below="@id/lablescorecard">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:src="@drawable/dash_img"/>
+</LinearLayout>
+    <TextView
+        android:id="@+id/labledashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/dash_background"
+        android:layout_below="@id/dashll2"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="DASHBOARD">
+
+    </TextView>
+    <ScrollView
+        android:layout_below="@id/labledashboard"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+            <TableRow
+                android:layout_width="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                >
+<ImageView android:layout_height="100dp"
+
+    android:layout_width="100dp"
+    android:padding="10dp"
+    android:background="@drawable/dash_background"
+    android:scaleType="fitCenter"
+    android:onClick="doccall"
+    android:src="@drawable/doccall"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="chemcall"
+                    android:src="@drawable/chemcall"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:onClick="planning"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/planning"></ImageView>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="120dp"
+
+                android:layout_height="match_parent"
+                >
+                <ImageView android:layout_height="100dp"
+
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="hr"
+                    android:src="@drawable/hr"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:onClick="finance"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/finance"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="training"
+                    android:src="@drawable/training"></ImageView>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="120dp"
+
+                android:layout_height="match_parent"
+                >
+                <ImageView android:layout_height="100dp"
+
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="sales"
+                    android:src="@drawable/sales"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:onClick="corpcomm"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/corpcomm"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="profile"
+                    android:src="@drawable/profile"></ImageView>
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

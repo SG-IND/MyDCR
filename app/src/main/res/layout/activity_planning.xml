@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tecvertex.mydcr.PlanningActivity">
+    <LinearLayout
+        android:id="@+id/planll1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/dash_background"
+        android:layout_alignParentTop="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/planningename"
+                android:text="E.Name: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/planninghq"
+                android:text="HQ: "
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/planningdesig"
+                android:text="Desig.: "
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageView
+                android:padding="10dp"
+                android:id="@+id/planninglogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@id/planll1"
+        android:layout_above="@id/planbackbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/lableplanning1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+
+                android:background="@drawable/dash_background"
+
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="PLANNING"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+            <TableRow
+                android:layout_width="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="match_parent"
+                >
+                <ImageView android:layout_height="100dp"
+
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="tpschedule"
+                    android:src="@drawable/tpschedule"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="activities"
+                    android:src="@drawable/activities"></ImageView>
+                <ImageView android:layout_height="100dp"
+                    android:layout_width="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/dash_background"
+                    android:scaleType="fitCenter"
+                    android:onClick="inputs"
+                    android:src="@drawable/inputs"></ImageView>
+
+            </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/lableplanning2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+android:layout_marginTop="10dp"
+                android:background="@drawable/dash_background"
+
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="UPDATE RECORDS"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_width="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView android:layout_height="100dp"
+
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="drlist"
+                        android:src="@drawable/drlist"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="chemlist"
+                        android:src="@drawable/chemlist"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="mtp"
+                        android:src="@drawable/mtp"></ImageView>
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/lableplanning3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dash_background"
+
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="RCPA"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_width="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView android:layout_height="100dp"
+
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="rxanalysis"
+                        android:src="@drawable/rxanalysis"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="competitors"
+                        android:src="@drawable/competitors"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="sharehq"
+                        android:src="@drawable/sharehq"></ImageView>
+
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/lableplanning4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dash_background"
+
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="SURVEY"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_width="120dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="match_parent"
+                    >
+                    <ImageView android:layout_height="100dp"
+
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="drsurvey"
+                        android:src="@drawable/drsurvey"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="chemsurvey"
+                        android:src="@drawable/chemsurvey"></ImageView>
+                    <ImageView android:layout_height="100dp"
+                        android:layout_width="100dp"
+                        android:padding="10dp"
+                        android:background="@drawable/dash_background"
+                        android:scaleType="fitCenter"
+                        android:onClick="surveyfeedback"
+                        android:src="@drawable/surveyfeedback"></ImageView>
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/planbackbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="back"
+        android:onClick="planback"
+        android:fontFamily="@font/mbold"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

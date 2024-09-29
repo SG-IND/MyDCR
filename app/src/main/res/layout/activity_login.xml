@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context="com.tecvertex.mydcr.LoginActivity">
+    <ImageView
+        android:id="@+id/loginlogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:contentDescription="My DCR"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"/>
+    <RelativeLayout
+        android:layout_below="@id/loginlogo"
+        android:layout_above="@id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+        <EditText
+            android:id="@+id/etloginecode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:ems="10"
+
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Employee Code"
+            android:textColorHint="@color/purple_200"
+            android:textColor="@color/purple_200"
+            android:padding="10dp"
+            android:layout_marginRight="30dp"
+            android:inputType="text"
+
+            android:fontFamily="@font/coople"/>
+        <EditText
+            android:id="@+id/etloginpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Enter Password"
+            android:textColorHint="@color/purple_200"
+            android:textColor="@color/purple_200"
+            android:padding="10dp"
+            android:layout_marginRight="30dp"
+            android:inputType="textPassword"
+
+            android:fontFamily="@font/coople"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:onClick="forgotpassword"
+                android:textStyle="bold|italic"
+                android:gravity="right"
+                android:text="Forgot Password"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_background"
+        android:layout_alignParentBottom="true"
+        android:text="login"
+        android:onClick="login"
+        android:fontFamily="@font/mbold"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
